@@ -1,0 +1,64 @@
+{
+    "apiVersion": "1.0.0",
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Heroes",
+        "description": "An API documentation for Heroes api developed in node and documented in the swagger-2.0 specification",
+        "license": {
+            "name": "MIT Liscense",
+            "url": "https://opensource.org/licenses/MIT"
+        }
+    },
+    "host": "localhost:3000/",
+    "tags": [
+        {
+            "name": "Heroes",
+            "description": "API's for Admin"
+        }
+    ],
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/": {
+            "get": {
+                "tags": [
+                    "Heroes"
+                ],
+                "summary": "Heroes List",
+                "description": "Heroes list will be shown",
+                "consumes": "application/json",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success!",
+                        "examples": {
+                            "application/json": [
+                                {
+                                    "_id": "5c8163ed1bdab90b4823de25",
+                                    "heroName": "Batman",
+                                    "heroHeight": 200,
+                                    "heroType": "Male",
+                                    "canFly": "False",
+                                    "superPowers": "Fight",
+                                    "fanFollowing": 15000,
+                                    "fightsWon": 150
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
